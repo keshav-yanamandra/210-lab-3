@@ -5,6 +5,17 @@
 #include <iostream>
 using namespace std;
 
+struct Restaurant {
+    string name;
+    string addressLine;
+    string cuisineType;
+    double rating;
+    bool hasReviews;
+    int maxOccupancy;
+
+    
+};
+
 int main() {
 
     return 0;

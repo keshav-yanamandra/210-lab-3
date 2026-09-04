@@ -25,11 +25,23 @@ void outputRestaurant(Restaurant restaurant);
 
 int main() {
 
-    Restaurant r1;
 
-    r1 = createRestaurant();
-    outputRestaurant(r1);
+    // r1 = createRestaurant();
+    // outputRestaurant(r1);
 
+    //new array to hold 4 restaurants
+    Restaurant restaurants[4];
+
+    //create 4 restaurants
+    for (int i = 0; i < 4; i++) {
+        cout << endl;
+        cout << "Enter info for restaurant " << i + 1 << ":" << endl;
+        restaurants[i] = createRestaurant();
+    }
+    
+    for (int i = 0; i < 4; i++) {
+        outputRestaurant(restaurants[i]);
+    }
     return 0;
 }
 //Write a function that will create a temporary struct, receive user input via the console to populate the struct's data, 
@@ -55,6 +67,9 @@ Restaurant createRestaurant() {
 
     cout << "hasReviews: ";
     cin >> tempRestaurant.hasReviews;
+
+    cin.ignore();
+
 
     return tempRestaurant;
 }

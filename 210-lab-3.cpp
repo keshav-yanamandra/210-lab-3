@@ -18,6 +18,8 @@ struct Restaurant {
 
 //function prototype 
 Restaurant createRestaurant();
+void outputRestaurant();
+
 
 
 
@@ -60,4 +62,13 @@ Restaurant createRestaurant() {
 
 
     return tempRestaurant;
+}
+
+void outputRestaurant(Restaurant restaurant) {
+    cout << "Name: " << restaurant.name << endl;
+    cout << "Address: " << restaurant.address << endl;
+    cout << "Cuisine Type: " << restaurant.cuisineType << endl;
+    cout << "Max Occupancy: " << restaurant.maxOccupancy << endl;
+    cout << "Rating: " << restaurant.rating << endl;
+    cout << "Has Reviews: " << restaurant.hasReviews << endl;
 }

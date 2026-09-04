@@ -26,9 +26,6 @@ void outputRestaurant(Restaurant restaurant);
 int main() {
 
 
-    // r1 = createRestaurant();
-    // outputRestaurant(r1);
-
     //new array to hold 4 restaurants
     Restaurant restaurants[4];
 

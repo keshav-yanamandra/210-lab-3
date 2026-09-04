@@ -18,7 +18,7 @@ struct Restaurant {
 
 //function prototype 
 Restaurant createRestaurant();
-void outputRestaurant();
+void outputRestaurant(Restaurant restaurant);
 
 
 
@@ -28,11 +28,7 @@ int main() {
     Restaurant r1;
 
     r1 = createRestaurant();
-    cout << r1.name << endl;
-    cout << r1.address << endl;
-    cout << r1.cuisineType << endl;
-    cout << r1.hasReviews << endl;
-    cout << r1.maxOccupancy << endl;
+    outputRestaurant(r1);
 
     return 0;
 }
@@ -60,15 +56,26 @@ Restaurant createRestaurant() {
     cout << "hasReviews: ";
     cin >> tempRestaurant.hasReviews;
 
-
     return tempRestaurant;
 }
 
 void outputRestaurant(Restaurant restaurant) {
+    cout << "************************" << endl;
+
     cout << "Name: " << restaurant.name << endl;
     cout << "Address: " << restaurant.address << endl;
     cout << "Cuisine Type: " << restaurant.cuisineType << endl;
     cout << "Max Occupancy: " << restaurant.maxOccupancy << endl;
     cout << "Rating: " << restaurant.rating << endl;
     cout << "Has Reviews: " << restaurant.hasReviews << endl;
+
+    if (restaurant.hasReviews) {
+            cout << "Has Reviews: Yes" << endl;
+        }
+        else {
+            cout << "Has Reviews: No" << endl;
+        }
+
+        cout << "************************" << endl;
+
 }

@@ -26,12 +26,11 @@ int main() {
     Restaurant r1;
 
     r1 = createRestaurant();
-    cout << r1.name;
-    cout << r1.address;
-    cout << r1.cuisineType;
-    cout << r1.hasReviews;
-    cout << r1.maxOccupancy;
-
+    cout << r1.name << endl;
+    cout << r1.address << endl;
+    cout << r1.cuisineType << endl;
+    cout << r1.hasReviews << endl;
+    cout << r1.maxOccupancy << endl;
 
     return 0;
 }

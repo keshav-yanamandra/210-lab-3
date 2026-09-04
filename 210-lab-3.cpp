@@ -23,6 +23,16 @@ Restaurant createRestaurant();
 
 int main() {
 
+    Restaurant r1;
+
+    r1 = createRestaurant();
+    cout << r1.name;
+    cout << r1.address;
+    cout << r1.cuisineType;
+    cout << r1.hasReviews;
+    cout << r1.maxOccupancy;
+
+
     return 0;
 }
 //Write a function that will create a temporary struct, receive user input via the console to populate the struct's data, 
@@ -39,6 +49,15 @@ Restaurant createRestaurant() {
 
     cout << "cuisineType: ";
     getline(cin, tempRestaurant.cuisineType);
+
+    cout << "Max occupancy: ";
+    cin >> tempRestaurant.maxOccupancy;
+
+    cout << "rating: ";
+    cin >> tempRestaurant.rating;
+
+    cout << "hasReviews: ";
+    cin >> tempRestaurant.hasReviews;
 
 
     return tempRestaurant;
